@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <span>Education First</span>
+    <div class="spacer"></div>
+    <!-- Show the "Home" link only if isLoggedIn is true -->
+    <a mat-button routerLink="home" *ngIf="isLoggedIn">Home</a>
+    <!-- Show the "Register" link only if isLoggedIn is false -->
+    <a mat-button routerLink="register" *ngIf="!isLoggedIn">Register</a>
+    <!-- Show the "Login" link only if isLoggedIn is false -->
+    <a mat-button routerLink="" *ngIf="!isLoggedIn">Login</a>
+    <a mat-button (click)="logout()" *ngIf="isLoggedIn">Logout</a>
+</mat-toolbar>
